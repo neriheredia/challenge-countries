@@ -3,6 +3,7 @@ import CardCountry from "../cardCountry/CardCountry"
 import "./contentsContinents.scss"
 
 const ContentContinents = ({ continents, countries, search, query }) => {
+  console.log(countries)
   return (
     <>
       {query
@@ -13,7 +14,15 @@ const ContentContinents = ({ continents, countries, search, query }) => {
                   <div className="containerContinents" key={n.code}>
                     <h2>{n.name}</h2>
                     <div className="continentContainer">
-                      <CardCountry key={country.code} name={country.name} />
+                      <CardCountry
+                        key={country.code}
+                        capital={country.capital}
+                        emojiU={country.emojiU}
+                        phone={country.phone}
+                        name={country.name}
+                        currency={country.currency}
+                        states={country.states}
+                      />
                     </div>
                   </div>
                 )
@@ -26,7 +35,15 @@ const ContentContinents = ({ continents, countries, search, query }) => {
                 {countries.map(
                   (n) =>
                     n.continent.code === continent.code && (
-                      <CardCountry key={n.code} name={n.name} />
+                      <CardCountry
+                        key={n.code}
+                        capital={n.capital}
+                        emojiU={n.emojiU}
+                        phone={n.phone}
+                        name={n.name}
+                        currency={n.currency}
+                        states={n.states}
+                      />
                     )
                 )}
               </div>

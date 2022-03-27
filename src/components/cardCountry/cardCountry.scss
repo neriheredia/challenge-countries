@@ -1,4 +1,5 @@
 @import "../../config/Variables/Variables.scss";
+@import "../../config/mixin/toggle.scss";
 
 .cardContainer {
   align-items: center;
@@ -11,14 +12,41 @@
   justify-content: center;
   margin-right: 1.3rem;
   min-width: 24rem;
+  max-width: 24rem;
+  min-height: 12rem;
+  max-height: 12rem;
   scroll-snap-align: center;
 
   .topContainerCard {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-around;
     padding: 0.5rem;
+    width: 100%;
+
+    .cardEmoji {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      font-family: $font-secondary;
+      font-size: 1.3rem;
+      justify-content: center;
+      margin-left: 0.5rem;
+    }
+
+    .cardTitle {
+      align-items: center;
+      display: flex;
+      flex: 9;
+      font-family: $font-secondary;
+      font-size: 1.5rem;
+      font-weight: 400;
+      justify-content: start;
+      margin: 0;
+      margin-left: 0.5rem;
+      padding: 5px;
+    }
   }
 
   .bottonContainerCard {
@@ -26,17 +54,40 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 
     .topBottonCard {
       flex: 1;
       display: flex;
+      justify-content: space-around;
       flex-direction: row;
+      width: 100%;
+
+      .capitalCard {
+        flex: 5;
+        text-align: center;
+        font-family: $font-secondary;
+        font-weight: 400;
+        margin-left: 0.05rem;
+      }
+
+      .phoneCard {
+        flex: 5;
+        text-align: center;
+        font-family: $font-secondary;
+        font-weight: 400;
+      }
     }
 
     .bottonBottonCard {
       flex: 1;
       display: flex;
       flex-direction: row;
+      width: 100%;
+
+      .selectCard {
+        @include toggle;
+      }
     }
   }
 }
