@@ -1,0 +1,95 @@
+@import "../../config/Variables/Variables.scss";
+@import "../../config/mixin/button.scss";
+
+.topBarContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    color: $bg-secondary;
+    font-family: $font-primary;
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 1rem;
+    padding: 0.2rem;
+    text-shadow: 1px 1px 1px $bg-shawdon, 1px 1px 1px $bg-shawdon,
+      1px 1px 1px $bg-shawdon, 1px 1px 1px $bg-shawdon;
+  }
+
+  .subTitle {
+    color: $black;
+    font-family: $font-secondary;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0 1rem;
+    padding: 0.2rem;
+    text-shadow: 1px 1px 1px $bg-primary, 1px 1px 1px $bg-primary,
+      1px 1px 1px $bg-primary, 1px 1px 1px $bg-primary;
+  }
+
+  .contentSearch {
+    align-items: center;
+    background: $white;
+    border: 1px solid $black;
+    -webkit-border-radius: 100px 100px 100px 100px;
+    border-radius: 100px 100px 100px 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    margin: 1rem 1rem;
+    padding: 0.4rem;
+    position: relative;
+    width: 25px;
+    transition: 0.7s;
+
+    .lupaSearch {
+      cursor: pointer;
+      margin: 0;
+      width: 1.5rem;
+    }
+
+    .inputSearch {
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      overflow: hidden;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .topBarOrderContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 1rem;
+    width: 100%;
+
+    .titleTopBarOrder {
+      color: $black;
+      font-family: $font-primary;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin: 0 1rem;
+      padding: 0.2rem;
+      text-shadow: 1px 1px 1px $white, 1px 1px 1px $white, 1px 1px 1px $white,
+        1px 1px 1px $white;
+    }
+
+    .topBarContentBtn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 2rem;
+
+      .btnOrder {
+        @include button($text-primary, $bg-primary);
+      }
+    }
+  }
+}

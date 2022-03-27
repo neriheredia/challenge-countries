@@ -1,6 +1,4 @@
-@import "./config/Variables/Variables.scss";
-@import "./config/mixin/toggle.scss";
-@import "./config/mixin/button.scss";
+@import "../../config/Variables/Variables.scss";
 
 .App {
   max-width: 1400px;
@@ -17,12 +15,4 @@
     left: 0;
     z-index: -1;
   }
-}
-
-.activeSearch {
-  @include toggle;
-}
-
-.active {
-  @include button($bg-primary, $bg-secondary);
 }
