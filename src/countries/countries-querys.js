@@ -14,6 +14,14 @@ export const GET_CONTINENTS_AND_COUNTRIES = gql`
     countries {
       code
       name
+      native
+      phone
+      capital
+      currency
+      emojiU
+      states {
+        name
+      }
       continent {
         code
         name

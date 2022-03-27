@@ -1,0 +1,14 @@
+@import "../../config/Variables/Variables.scss";
+@import "../../config/mixin/containerCards.scss";
+
+.containerContinents {
+  @include containerCards;
+
+  h2 {
+    @include titleContainerCards;
+  }
+
+  .continentContainer {
+    @include containerCard;
+  }
+}
