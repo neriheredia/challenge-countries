@@ -3,9 +3,8 @@
 
 .cardContainer {
   align-items: center;
-  background-color: $bg-secondary;
-  box-shadow: 1px 1px 10px $bg-shawdon;
-  border: 1px solid $bg-shawdon;
+  background-color: #ff87ad;
+  box-shadow: 1px 1px 10px $black;
   border-radius: 20px;
   display: inline-flex;
   flex-direction: column;
@@ -26,6 +25,8 @@
     width: 100%;
 
     .cardEmoji {
+      color: $white;
+      font-weight: 600;
       align-items: center;
       display: flex;
       flex: 1;
@@ -37,11 +38,13 @@
 
     .cardTitle {
       align-items: center;
+      color: $white;
       display: flex;
       flex: 9;
       font-family: $font-secondary;
       font-size: 1.5rem;
       font-weight: 400;
+      letter-spacing: 1px;
       justify-content: start;
       margin: 0;
       margin-left: 0.5rem;
@@ -57,6 +60,7 @@
     width: 100%;
 
     .topBottonCard {
+      color: $white;
       flex: 1;
       display: flex;
       justify-content: space-around;
@@ -83,7 +87,16 @@
       flex: 1;
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
       width: 100%;
+
+      .divisaCard {
+        flex: 5;
+        color: $white;
+        text-align: center;
+        font-family: $font-secondary;
+        font-weight: 400;
+      }
 
       .selectCard {
         @include toggle;

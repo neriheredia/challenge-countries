@@ -13,23 +13,27 @@ const CardCountry = ({ name, emojiU, capital, phone, currency, states }) => {
       <div className="bottonContainerCard">
         <div className="topBottonCard">
           <p className="capitalCard">
-            Capital: {capital ? capital : "Has no capital"}
+            <strong>Capital:</strong> {capital ? capital : "Has no capital"}
           </p>
-          <p className="phoneCard">Phone: +{phone}</p>
+          <p className="phoneCard">
+            <strong>Phone:</strong> +{phone}
+          </p>
         </div>
         <div className="bottonBottonCard">
-          <p>Divisa: {currency}</p>
+          <p className="divisaCard">
+            <strong>Currency:</strong> {currency}
+          </p>
           {states ? (
             <>
               <select className="selectCard">
-                <option>States</option>
+                <option className="optionCard">States</option>
                 {states.map((state) => (
                   <option key={state.name}>{state.name}</option>
                 ))}
               </select>
             </>
           ) : (
-            <select>
+            <select className="selectCard">
               <option>There are no states</option>
             </select>
           )}

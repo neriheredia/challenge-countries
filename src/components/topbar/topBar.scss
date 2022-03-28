@@ -7,15 +7,15 @@
   flex-direction: column;
 
   .title {
-    color: $bg-secondary;
+    color: $white;
     font-family: $font-primary;
     font-size: 3.5rem;
     font-weight: bold;
     letter-spacing: 2px;
     margin: 0 1rem;
     padding: 0.2rem;
-    text-shadow: 1px 1px 1px $bg-shawdon, 1px 1px 1px $bg-shawdon,
-      1px 1px 1px $bg-shawdon, 1px 1px 1px $bg-shawdon;
+    text-shadow: 1px 1px 1px $black, 1px 1px 1px $black, 1px 1px 1px $black,
+      1px 1px 1px $black;
   }
 
   .subTitle {
@@ -69,26 +69,31 @@
     width: 100%;
 
     .titleTopBarOrder {
+      flex: 1;
+      display: flex;
+      justify-content: end;
       color: $black;
       font-family: $font-primary;
       font-size: 2rem;
       font-weight: 400;
       letter-spacing: 2px;
       margin: 0 1rem;
+      margin-right: 5rem;
       padding: 0.2rem;
       text-shadow: 1px 1px 1px $white, 1px 1px 1px $white, 1px 1px 1px $white,
         1px 1px 1px $white;
     }
 
     .topBarContentBtn {
+      flex: 1;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: start;
       align-items: center;
       margin-right: 2rem;
 
       .btnOrder {
-        @include button($text-primary, $bg-primary);
+        @include button($black, $bg-primary, 400);
       }
     }
   }
