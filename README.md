@@ -1,3 +1,13 @@
+## Deploy y Respuesta
+
+Neri Heredia Deploy: [Link](https://challenge-countries.vercel.app/)
+
+Pregunta : "La tabla que contiene la información correspondiente a la asistencia diaria de un niño en un colegio tiene 90 millones de filas. Todas las tablas del sistema existen en la misma BDD en MySQL. La lógica del backend que actualiza la información correspondiente al pasar la asistencia tiene un tiempo de servicio p95 de 10 segundos. El equipo está interesado en bajar este tiempo para mejorar la experiencia del usuario (y porque nos gusta pensar en Kimche como un Ferrari). ¿Qué propondrías para enfrentar el problema? Esta pregunta es abierta, no hay respuestas malas. Puedes proponer arquitectura, tecnologías, diseño, etc."
+
+Respuesta: En principio, propondría una revisión de la política en cuanto a qué datos se guardarán en la base de datos, ya que tener 90 millones de filas por alumno me parece impensable.
+
+Además, implementaría en el backend un algoritmo de verificación que compruebe que los datos recibidos podrán ser usados satisfactoriamente por la DB para actualizarse, y envíe una respuesta al front en caso positivo, sin necesidad de esperar a que la DB se haya actualizado. ¿Por qué? Porque así el tiempo de respuesta será relativo al peso del JSON enviado y no al tiempo de actualización de la DB. Esto supondría una respuesta en una fracción de segundo, en comparación a los 10 segundos mencionados.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
