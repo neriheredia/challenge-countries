@@ -7,6 +7,15 @@
   min-height: 100vh;
   margin: auto;
   position: relative;
+  * {
+    &::-webkit-scrollbar {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #1995ad;
+      border-radius: 20px;
+    }
+  }
 
   .image {
     width: 100%;
@@ -24,5 +33,5 @@
 }
 
 .active {
-  @include button($bg-primary, $bg-secondary);
+  @include button($white, #1995ad, 700);
 }

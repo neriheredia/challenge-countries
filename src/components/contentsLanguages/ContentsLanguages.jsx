@@ -15,7 +15,15 @@ const ContentsLanguages = ({ countries, languages, search, query }) => {
                   <div className="containerLanguages" key={n.code}>
                     <h2>{n.name}</h2>
                     <div className="continentLanguages">
-                      <CardCountry key={country.code} name={country.name} />
+                      <CardCountry
+                        key={country.code}
+                        capital={country.capital}
+                        emojiU={country.emojiU}
+                        phone={country.phone}
+                        name={country.name}
+                        currency={country.currency}
+                        states={country.states}
+                      />
                     </div>
                   </div>
                 )
@@ -28,7 +36,15 @@ const ContentsLanguages = ({ countries, languages, search, query }) => {
                 {countries.map(
                   (n) =>
                     n.languages.some((key) => key.code === language.code) && (
-                      <CardCountry key={n.code} name={n.name} />
+                      <CardCountry
+                        key={n.code}
+                        capital={n.capital}
+                        emojiU={n.emojiU}
+                        phone={n.phone}
+                        name={n.name}
+                        currency={n.currency}
+                        states={n.states}
+                      />
                     )
                 )}
               </div>

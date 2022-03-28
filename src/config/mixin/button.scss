@@ -1,6 +1,6 @@
 @import "../Variables/Variables.scss";
 
-@mixin button($color, $bgColor) {
+@mixin button($color, $bgColor, $fontWeight) {
   background: $bgColor;
   border-radius: 10px;
   border: 1px solid $bg-primary;
@@ -12,4 +12,5 @@
   font-family: $bg-primary;
   margin-right: 2rem;
   padding: 0.4rem;
+  font-weight: $fontWeight;
 }
