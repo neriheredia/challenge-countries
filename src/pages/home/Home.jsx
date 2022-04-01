@@ -8,8 +8,8 @@ import ContentsLanguages from "../../components/contentsLanguages/ContentsLangua
 import Topbar from "../../components/topbar/Topbar"
 
 const Home = () => {
-  /* Custom Hook creado para dejar la logica encapsulada en otro lado
-    y traer los datos y metodos que voy a pasarle a los componentes*/
+  /* Custom Hook creado para dejar la lógica encapsulada en otro lado
+    y traer los datos y métodos que voy a pasarle a los componentes*/
   const {
     countries,
     languages,
@@ -19,7 +19,7 @@ const Home = () => {
     action,
     handleBtn,
   } = useCountries()
-  /* Custom hook que hace la logica para atrapar el event y el value
+  /* Custom hook que hace la lógica para atrapar el evento y el valué
       de un input y devuelve un objeto con esos valores*/
   const { type, value, onChange } = useForm({ type: "text" })
 
@@ -35,9 +35,9 @@ const Home = () => {
         action={action}
         handleBtn={handleBtn}
       />
-      {/* Tome la decicion de hacer 2 componentes para el encapsulamiento de 
-        continentes como de penguajes. No cree un solo componente que segun reciba
-        el parametro ejecutes el mapeo, ya que los mapeos son diferentes en algunas
+      {/* Tome la decisión de hacer 2 componentes para el encapsulamiento de 
+        Continentes como de lenguajes. No cree un solo componente que según reciba
+        el parámetro ejecutes el mapeo, ya que los mapeos son diferentes en algunas
         propiedades*/}
       {action ? (
         <ContentContinents
