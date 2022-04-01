@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-// Hook que recibe un type y devuelve un obejto con el type, el value y el onChage
+// Hook que recibe un type y devuelve un objeto con el type, el valué y el onChage
 export const useForm = ({ type }) => {
   const [value, setValue] = useState("")
 
