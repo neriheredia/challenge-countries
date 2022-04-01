@@ -3,7 +3,6 @@ import CardCountry from "../cardCountry/CardCountry"
 import "./contentsContinents.scss"
 
 const ContentContinents = ({ continents, countries, search, query }) => {
-  console.log(countries)
   return (
     <>
       {query
