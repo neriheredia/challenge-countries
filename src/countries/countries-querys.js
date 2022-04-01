@@ -1,6 +1,6 @@
 import { gql } from "apollo-boost"
 
-// Query para la peticion del grafo de las ciudades
+// Query para la petición del grafo de las ciudades
 export const GET_CONTINENTS_AND_COUNTRIES = gql`
   query fetchingContinents {
     continents {
